@@ -1,0 +1,25 @@
+MariaDB [(none)]> CREATE DATABASE students;
+Query OK, 1 row affected (0.000 sec)
+
+
+MariaDB [(none)]> use students;
+Database changed
+
+MariaDB [students]> create table emp(s_id INT PRIMARY KEY,s_name varchar(50),s_age TINYINT);
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [students]> insert into emp values (1,"Ram",21);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [students]> insert into emp values (2,"shamam",21);
+Query OK, 1 row affected (0.001 sec)
+
+
+MariaDB [students]> select * from emp;
++------+--------+-------+
+| s_id | s_name | s_age |
++------+--------+-------+
+|    1 | Ram    |    21 |
+|    2 | shamam |    21 |
++------+--------+-------+
+2 rows in set (0.000 sec)
