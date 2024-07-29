@@ -39,7 +39,6 @@ Query OK, 0 rows affected (0.037 sec)
 
 2. Modify Table Structure
 
-
 MariaDB [school_management]> -- Add a new column grade to the students table
 MariaDB [school_management]> ALTER TABLE students
     -> ADD grade VARCHAR(2);
