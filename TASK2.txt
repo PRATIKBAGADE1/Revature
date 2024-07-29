@@ -4,14 +4,14 @@ Task2(Day1)
 
 1. Create a Database and Tables
 
-MariaDB [(none)]> -- Create the school_management database
+ -- Create the school_management database
 MariaDB [(none)]> CREATE DATABASE school_management;
 Query OK, 1 row affected (0.003 sec)
 
-MariaDB [(none)]> 
-MariaDB [(none)]> -- Switch to the school_management database
+ -- Switch to the school_management database
 MariaDB [(none)]> USE school_management;
 Database changed
+
 MariaDB [school_management]> 
 MariaDB [school_management]> -- Create the students table
 MariaDB [school_management]> CREATE TABLE students (
