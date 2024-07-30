@@ -25,7 +25,7 @@ MariaDB [school_management]> CREATE TABLE students (
 Query OK, 0 rows affected (0.067 sec)
 
 
-MariaDB [school_management]> 
+
 MariaDB [school_management]> -- Create the courses table
 MariaDB [school_management]> CREATE TABLE courses (
     ->     course_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -45,7 +45,7 @@ MariaDB [school_management]> ALTER TABLE students
 Query OK, 0 rows affected (0.037 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-MariaDB [school_management]> 
+ 
 MariaDB [school_management]> -- Change the data type of the phone_number column to VARCHAR(15)
 MariaDB [school_management]> ALTER TABLE students
     -> MODIFY phone_number VARCHAR(15);
@@ -65,7 +65,7 @@ MariaDB [school_management]> INSERT INTO students (first_name, last_name, email,
 Query OK, 3 rows affected (0.016 sec)
 Records: 3  Duplicates: 0  Warnings: 0
 
-MariaDB [school_management]> 
+
 MariaDB [school_management]> -- Insert records into the courses table
 MariaDB [school_management]> INSERT INTO courses (course_name, course_description, credits)
     -> VALUES
@@ -101,7 +101,7 @@ MariaDB [school_management]> -- Drop the students table
 MariaDB [school_management]> DROP TABLE students;
 Query OK, 0 rows affected (0.015 sec)
 
-MariaDB [school_management]> 
+
 MariaDB [school_management]> -- Drop the school_management database
 MariaDB [school_management]> DROP DATABASE school_management;
 Query OK, 1 row affected (0.043 sec)
