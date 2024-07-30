@@ -4,7 +4,7 @@ use wee1day2;
 
 
 CREATE TABLE Departments (
-    DepartmentID INT PRIMARY KEY,
+    DepartmentID INT ,
     DepartmentName VARCHAR(50) NOT NULL
 );
 
@@ -60,30 +60,30 @@ select * from Projects;
 
 -- que1) Create a constraint to ensure that the salary of an employee is greater than 0.
 ALTER TABLE Employees
-ADD CONSTRAINT CHK_Salary CHECK (Salary > 0);
+ADD CONSTRAINT  CHECK (Salary > 0);
 
 
 -- que2)Create a foreign key constraint in the Employees table to reference the DepartmentID in the Departments table.
 ALTER TABLE Employees
-ADD CONSTRAINT FK_DepartmentID FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
+ADD CONSTRAINT  FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
 
 
 
 -- que3)Create a unique constraint on the Email column in the Employees table.
 ALTER TABLE Employees
-ADD CONSTRAINT UQ_Email UNIQUE (Email);
+ADD CONSTRAINT  UNIQUE (Email);
 
 
 
 -- que4)Create a primary key constraint on the DepartmentID column in the Departments table.
 ALTER TABLE Departments
-ADD CONSTRAINT PK_DepartmentID PRIMARY KEY (DepartmentID);
+ADD CONSTRAINT PRIMARY KEY (DepartmentID);
 
 
 
 -- que5)Create a foreign key constraint in the Projects table to reference the DepartmentID in the Departments table.
 ALTER TABLE Projects
-ADD CONSTRAINT FK_ProjectDepartmentID FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
+ADD CONSTRAINT  FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID);
 
 
 -- 6)Insert a new employee with a DepartmentID that does not exist in the Departments table and observe the foreign key constraint violation.
